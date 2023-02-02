@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
+import { Fileloader } from "./components/Fileloader";
+import { BoxCntent } from "./components/BoxCntent";
 
 function App() {
   const [file, setFile] = useState(null);
@@ -7,7 +9,7 @@ function App() {
   // console.log(window)
   const handleFilePicker = () => {
     window.OneDrive.open({
-      clientId: "2c560ec8-749c-4ce4-9642-32aa42180faf",
+      clientId: "8aaed5cf-1e4f-42f0-9583-1a7385669201",
       action: "pick",
       multiSelect: false,
       success: (files) => {
@@ -22,9 +24,17 @@ function App() {
     });
   };
   return (
-    <div>
-      <button onClick={handleFilePicker}>Pick a file</button>
+    <div className="App">
+      {/* <div>
+          <button onClick={handleFilePicker}>Pick a file</button>
       {file && <p>{file.name}</p>}
+      <br></br>
+      <br></br>
+      <br></br>
+      <Fileloader></Fileloader>
+      </div> */}
+      <BoxCntent></BoxCntent>
+    
     </div>
   );
 }

@@ -1,0 +1,7 @@
+.mystyle >p{
+ display: none;
+}
+.mystyle:hover > p{
+   font-size: 10px;
+   display: block;
+}
